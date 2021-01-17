@@ -15,6 +15,7 @@ const cjsOutput = {
   exports: 'auto',
 };
 
+// eslint-disable-next-line import/no-anonymous-default-export
 export default {
   input: 'src/index.ts',
   output: [
@@ -24,14 +25,14 @@ export default {
     { ...cjsOutput, file: 'lib/cjs/index.min.js', plugins: [terser()] },
   ],
   plugins: [
-    typescript({
-      useTsconfigDeclarationDir: true,
-      tsconfig: 'tsconfig.json',
-    }),
     eslint({
       throwOnError: true,
       throwOnWarning: true,
     }),
+    typescript({
+      useTsconfigDeclarationDir: true,
+      tsconfig: 'tsconfig.json',
+    }),
   ],
-  external: ['react'],
+  external: ['@incognitus/client-web-core', 'react'],
 };

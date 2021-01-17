@@ -33,7 +33,7 @@
   "scripts": {
     "prebuild": "rimraf lib && rimraf types",
     "build": "rollup --config rollup.config.js",
-    "lint": "eslint ./src --ext .js,.ts,.tsx",
+    "lint": "eslint ./src --ext .js,.ts --ext .jsx,.tsx",
     "test": "yarn test:ci --watch",
     "test:ci": "jest"
   },
