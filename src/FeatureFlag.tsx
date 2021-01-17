@@ -39,7 +39,7 @@ const findSlot = (vnodes: ReactNode, slot: any): ReactElement | undefined => {
   return undefined;
 };
 
-const FeatureFlag: FunctionComponent<FeatureFlagProps> = ({
+export const FeatureFlag: FunctionComponent<FeatureFlagProps> = ({
   children,
   flag,
   hidden = false,
@@ -83,7 +83,5 @@ const FeatureFlag: FunctionComponent<FeatureFlagProps> = ({
       return disabledSlot.props.children;
     }
   }
-  return <></>;
+  return null;
 };
-
-export default FeatureFlag;

@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { render, screen } from '@testing-library/react';
-import FeatureFlag, {
+import {
+  FeatureFlag,
   FeatureFlagLoading,
   FeatureFlagEnabled,
   FeatureFlagDisabled,
@@ -89,6 +90,27 @@ describe('FeatureFlag component', () => {
 
       const res = await screen.findByTestId('disabled');
       expect(res.textContent).toContain('Disabled');
+    });
+
+    it('renders childern when only enabled slot is declared', async () => {
+      (useIncognitusMock.service!.isEnabled as jest.Mock).mockResolvedValue(
+        true,
+      );
+      useIncognitusMock.isReady = true;
+
+      const SingleSut = () => (
+        <FeatureFlag flag="foobar">
+          <FeatureFlagEnabled>
+            <span data-testid="enabled">Enabled</span>
+          </FeatureFlagEnabled>
+        </FeatureFlag>
+      );
+
+      const { rerender } = render(<SingleSut />);
+      rerender(<SingleSut />);
+
+      const res = await screen.findByTestId('enabled');
+      expect(res.textContent).toContain('Enabled');
     });
   });
 
