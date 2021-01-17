@@ -1,18 +1,18 @@
 {
-  "name": "template-project",
-  "description": "{{ Fill me in }}",
+  "name": "@incognitus/client-react",
+  "description": "Incognitus react client",
   "version": "1.0.0",
   "license": "MIT",
-  "private": true,
+  "private": false,
   "author": "Incognitus <support@incognitus.io>",
   "repository": {
     "type": "git",
-    "url": "git@github.com:Incognitus-Io/{{repo}}.git"
+    "url": "git@github.com:Incognitus-Io/client-react.git"
   },
   "bugs": {
-    "url": "https://github.com/Incognitus-IO/{{repo}}/issues"
+    "url": "https://github.com/Incognitus-IO/client-react/issues"
   },
-  "homepage": "https://github.com/Incognitus-Io/{{repo}}#readme",
+  "homepage": "https://github.com/Incognitus-Io/client-react#readme",
   "keywords": [
     "feature-flags",
     "feature-toggle",
