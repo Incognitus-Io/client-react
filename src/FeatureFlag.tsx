@@ -33,7 +33,7 @@ const findSlot = (vnodes: ReactNode, slot: any): ReactElement | undefined => {
   }
   const vnode = vnodes as ReactElement;
   const type = vnode.type as { name: string };
-  if (type?.name === slot.name) {
+  if (type && type.name === slot.name) {
     return vnodes as ReactElement;
   }
   return undefined;
