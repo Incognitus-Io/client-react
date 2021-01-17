@@ -15,8 +15,14 @@
       "@/*": ["src/*"]
     },
     "outDir": "dist",
-    "declarationDir": "types"
+    "declarationDir": "types",
+    "jsx": "react",
+    "allowJs": true
   },
-  "include": ["src/**/*.ts"],
+  "include": [
+    "src/**/*.ts",
+    "src/__tests__/FeatureFlag.test.tsx",
+    "src/__tests__/useIncognitus.test.tsx"
+  ],
   "exclude": ["node_modules", "src/**/__tests__/*"]
 }

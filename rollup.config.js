@@ -33,5 +33,5 @@ export default {
       throwOnWarning: true,
     }),
   ],
-  external: [],
+  external: ['react'],
 };

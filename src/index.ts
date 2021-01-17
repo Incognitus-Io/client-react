@@ -1,1 +1,2 @@
-export default 'foo';
+export * from './FeatureFlag';
+export * from './useIncognitus';
