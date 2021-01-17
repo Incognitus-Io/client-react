@@ -1,4 +1,4 @@
-# Incognitus Feature Flag (Vue 2 & 3)
+# Incognitus Feature Flag
 
 ![Continuous Integration](https://github.com/Incognitus-Io/client-react/workflows/Continuous%20Integration/badge.svg)
 [![codecov](https://codecov.io/gh/Incognitus-Io/client-react/branch/master/graph/badge.svg?token=HJ4XoCv8oZ)](https://codecov.io/gh/Incognitus-Io/client-react)
